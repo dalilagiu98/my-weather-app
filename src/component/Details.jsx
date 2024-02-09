@@ -83,6 +83,7 @@ const Details = () => {
                 <h1>{cityDetails.name}</h1>
                 <h2>{convertKelvinToCelsius(cityDetails.main.temp).toFixed(1)}°C</h2>
                 <h4>{cityDetails.weather[0].description}</h4>
+                <img src={`https://openweathermap.org/img/wn/${cityDetails.weather[0].icon}@2x.png`} alt="icon"/> 
                 <h5><strong>MAX:</strong> {convertKelvinToCelsius(cityDetails.main.temp_max).toFixed(1)}°C - <strong>MIN:</strong> {convertKelvinToCelsius(cityDetails.main.temp_min).toFixed(1)}°C </h5>
             </div>
             </Col>

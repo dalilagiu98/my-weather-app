@@ -34,6 +34,7 @@ const CardDays = (props) => {
             <div className="border border-dark rounded bg-info-subtle p-2 h-100" onClick={handleShow} style={{ cursor: 'pointer' }}>
                 <h4>{formatDate(props.day.dt)}</h4>
                 <h4>{formatTime(props.day.dt)}</h4>
+                <img src={`https://openweathermap.org/img/wn/${props.day.weather[0].icon}@2x.png`} alt="icon"/> 
                 <h5>Temperature:</h5>
                 <h6>{convertKelvinToCelsius(props.day.main.temp).toFixed(1)}°C</h6> 
                 <h5>Description:</h5>
@@ -45,7 +46,7 @@ const CardDays = (props) => {
                 </Modal.Header>
                 <Modal.Body>
                     <h4>Temperature:</h4>
-                    <h5>{convertKelvinToCelsius(props.day.main.temp).toFixed(1)}°C</h5> 
+                    <h5>{convertKelvinToCelsius(props.day.main.temp).toFixed(1)}°C</h5>
                     <h4>Description:</h4>
                     <h5> {props.day.weather[0].description}</h5>
                     <h4>MAX:</h4>
